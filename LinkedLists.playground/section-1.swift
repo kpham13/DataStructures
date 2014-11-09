@@ -2,8 +2,6 @@
 
 import UIKit
 
-var str = "Hello, playground"
-
 func doSomething<T>(a: T, b: T) {
     
     println("hello")
