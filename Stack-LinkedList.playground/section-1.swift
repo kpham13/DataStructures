@@ -1,5 +1,6 @@
-// Data Structures - Stack using Linked Lists
-// Queues are Last In, First Out (LIFO)
+/////////////////////////////////////////////////
+// Data Structures - Stacks using Linked Lists //
+/////////////////////////////////////////////////
 
 import UIKit
 
@@ -60,8 +61,9 @@ class LinkedList<T: Equatable> {
     
 }
 
-var linkedQueue = LinkedList<Int>()
-linkedQueue.push(3)
-linkedQueue.push(3999)
+var linkedStack = LinkedList<Int>()
+linkedStack.push(3)
+linkedStack.push(3999)
+linkedStack.push(54)
 
-linkedQueue.pop()
+linkedStack.pop()

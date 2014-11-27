@@ -1,40 +1,19 @@
-// Playground - noun: a place where people can play
+///////////////////////////////////
+// Data Structures - Linked Lists //
+///////////////////////////////////
+
+// Groups of nodes linked together in a sequence.
+// Each node stores some piece of data and a pointer to the next value.
+// Linear time cost is more expensive than constant time of an array.
+// Linked lists are slower than arrays, O(n) > O(1).
 
 import UIKit
-
-func doSomething<T>(a: T, b: T) {
-    
-    println("hello")
-}
-
-struct Stack <T> {
-    
-    private var items = [T]()
-    
-    mutating func push(item: T) {
-        self.items.append(item)
-    }
-    
-    mutating func pop() -> T {
-        var itemToPop = self.items.last
-        self.items.removeLast()
-        return itemToPop!
-    }
-}
-
-// Syntax is of Struct
-var myStack = Stack<String>()
-
-myStack.push("Alex")
-myStack.push("Stacy")
-myStack.push("Stacy's mom")
-myStack.pop()
-myStack.items
 
 class Node <T> {
     
     var value : T?
     var next : Node?
+    
 }
 
 class LinkedList <T: Equatable> {
@@ -54,11 +33,10 @@ class LinkedList <T: Equatable> {
         // Walking the list...
         var currentNode = head
         while currentNode?.next != nil {
-            println("Going to next node...")
             currentNode = currentNode?.next
         }
         
-        // Adding new node at end of LinkedList
+        // Adding new node to end of linked list
         var node = Node<T>()
         node.value = value
         node.next = nil
@@ -69,19 +47,20 @@ class LinkedList <T: Equatable> {
         if head != nil {
             var node = head
             var previousNode : Node<T>? = nil
+            
+            // Walk the list. Break loop if values match or reach end of linked list.
             while node?.value != value && node?.next != nil {
-                // Changed LinkedList to conform to Equatable protocol because of error
                 previousNode = node
                 node = node?.next
             }
             
             // If the current node is the same value...
             if node?.value == value {
-                if node?.next != nil {
-                    // Remove current node by unlinking previous node
+                if node?.value == head?.value { // HEAD
+                    head = nil
+                } else if node?.next == nil { // TAIL
                     previousNode?.next = nil
                 } else {
-                    // In essence, making the previous node link into nil
                     previousNode?.next = node?.next
                 }
             }
@@ -108,43 +87,3 @@ linkedList.insert(20)
 linkedList.insert(10)
 
 linkedList.remove(20)
-
-
-
-/*
-// Big O?
-class NodeO {
-    
-    var value : Int
-    
-    var leftNode : NodeO?
-    var rightNode : NodeO?
-    
-    init(value: Int) {
-        self.value = value
-    }
-    
-    func addNode(newNode : NodeO) {
-        if newNode.value < self.value {
-            
-            // if less than, go to the left
-            if leftNode == nil {
-                self.leftNode = newNode
-            } else {
-                // recursion
-                self.leftNode?.addNode(newNode)
-            }
-            
-        } else if newNode.value > self.value {
-            
-            // if greater than, go to the right
-            if rightNode == nil {
-                self.rightNode = newNode
-            } else {
-                self.rightNode?.addNode(newNode)
-            }
-        }
-    }
-
-}
-*/

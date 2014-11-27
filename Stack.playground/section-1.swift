@@ -1,9 +1,12 @@
-// Playground - noun: a place where people can play
+//////////////////////////////
+// Data Structures - Stacks //
+//////////////////////////////
+
+// "The stack data structure is one of the most important data structures in computer science."
+// Last in, first out (LIFO).
+// The last thing we added to the stack (pushed) is the first thing that gets taken off (popped).
 
 import UIKit
-
-// Data Structures - Stack
-// Stacks are Last In, First Out (LIFO)
 
 class Stack {
     
@@ -25,6 +28,7 @@ class Stack {
         }
     }
     
+    // Peek at next one to get popped off
     func peek() -> String? {
         if let string = stackArray.last {
             return string

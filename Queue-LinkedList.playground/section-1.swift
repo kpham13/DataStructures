@@ -1,5 +1,6 @@
-// Data Structures - Queue using Linked Lists
-// Queues are First In, First Out (FIFO)
+/////////////////////////////////////////////////
+// Data Structures - Queues using Linked Lists //
+/////////////////////////////////////////////////
 
 import UIKit
 
@@ -44,6 +45,15 @@ class LinkedList<T: Equatable> {
             var node = head
             head = node?.next
             return Node<T>()
+        } else {
+            return nil
+        }
+    }
+    
+    func peek() -> Node<T>? {
+        if head != nil {
+            var node = head
+            return node
         } else {
             return nil
         }

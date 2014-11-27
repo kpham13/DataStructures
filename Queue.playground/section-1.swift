@@ -1,9 +1,12 @@
-// Playground - noun: a place where people can play
+//////////////////////////////
+// Data Structures - Queues //
+//////////////////////////////
+
+// Similar to Stack, but it is first in, first out (FIFO).
+// Enqueue to add, dequeue to remove.
+// Peek is used to simply observe the value at the front of the queue.
 
 import UIKit
-
-// Data Structures - Queue
-// Queues are First In, First Out (FIFO)
 
 class Queue {
     
