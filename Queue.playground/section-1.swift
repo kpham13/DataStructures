@@ -1,12 +1,12 @@
-//////////////////////////////
-// Data Structures - Queues //
-//////////////////////////////
+/////////////////////////////
+// Data Structures - Queue //
+/////////////////////////////
 
 // Similar to Stack, but it is first in, first out (FIFO).
 // Enqueue to add, dequeue to remove.
 // Peek is used to simply observe the value at the front of the queue.
 
-import UIKit
+import Foundation
 
 class Queue {
     
@@ -42,6 +42,6 @@ myQueue.enqueue("Cust1")
 myQueue.enqueue("Cust2")
 myQueue.enqueue("Cust3")
 myQueue.dequeue()
-println(myQueue.queueArray)
-println(myQueue.queueArray[0])
+myQueue.queueArray
+myQueue.queueArray[0]
 myQueue.nextOut()

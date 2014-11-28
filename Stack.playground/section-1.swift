@@ -1,12 +1,12 @@
-//////////////////////////////
-// Data Structures - Stacks //
-//////////////////////////////
+/////////////////////////////
+// Data Structures - Stack //
+/////////////////////////////
 
 // "The stack data structure is one of the most important data structures in computer science."
 // Last in, first out (LIFO).
 // The last thing we added to the stack (pushed) is the first thing that gets taken off (popped).
 
-import UIKit
+import Foundation
 
 class Stack {
     
@@ -45,5 +45,5 @@ myStack.push("Pop")
 myStack.push("n")
 myStack.push("Lock")
 myStack.pop()
-println(myStack.stackArray)
+myStack.stackArray
 myStack.peek()

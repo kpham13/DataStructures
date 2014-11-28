@@ -7,18 +7,18 @@
 // Linear time cost is more expensive than constant time of an array.
 // Linked lists are slower than arrays, O(n) > O(1).
 
-import UIKit
+import Foundation
 
-class Node <T> {
+class Node<T> {
     
     var value : T?
     var next : Node?
     
 }
 
-class LinkedList <T: Equatable> {
+class LinkedList<T: Equatable> {
     
-    var head : Node <T>?
+    var head : Node<T>?
     
     func insert(value: T) {
         // First case (0th) if list is empty
@@ -56,15 +56,16 @@ class LinkedList <T: Equatable> {
             
             // If the current node is the same value...
             if node?.value == value {
-                if node?.value == head?.value { // HEAD
-                    head = nil
+                if node?.value == head?.value && node?.next == nil { // HEAD ONLY
+                    self.head = nil
+                } else if node?.value == head?.value { // HEAD+
+                    self.head = node?.next
                 } else if node?.next == nil { // TAIL
                     previousNode?.next = nil
                 } else {
                     previousNode?.next = node?.next
                 }
             }
-            
         }
     }
 }
