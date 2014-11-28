@@ -7,3 +7,4 @@ Data structures written in Swift exist in their own playground.
 - Queue (Array & Linked List)
 - Linked List
 - Hash Table
+- Binary Search Tree
