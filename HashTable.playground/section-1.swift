@@ -100,6 +100,11 @@ class HashTable {
             self.bucketArray[index] = node // Sets node at hashed index of bucketArray
         } else {
             // Handling collisions
+            // Set the next pointer of current node to head node
+            var headNode = self.bucketArray[index]
+            node.next = headNode
+            
+            /* Alternative method
             // Walk the linked list when head exists at bucketArray
             var currentNode = self.bucketArray[index]
             while currentNode.next != nil {
@@ -108,6 +113,7 @@ class HashTable {
             
             // Add node to end of linked list
             currentNode.next = node
+            */
         }
     }
     
