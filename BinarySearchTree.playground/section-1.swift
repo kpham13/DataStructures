@@ -217,6 +217,8 @@ bst.insert(50)
 bst.root
 
 bst.description
+Traverser.preorderTraversal(bst.root)
+Traverser.postorderTraversal(bst.root)
 Traverser.inorderTraversal(bst.root)
 
 bst.insert(20)
